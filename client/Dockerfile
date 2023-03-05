@@ -4,7 +4,6 @@ WORKDIR /app
 RUN apk add build-base \
     git
 COPY . .
-RUN mv .netrc /root
 ENV GOPRIVATE github.com/frankcai/*
 RUN go mod download
 # go test -bench=Bench -benchmem -cpu=1 -benchtime=1x
