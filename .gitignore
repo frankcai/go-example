@@ -1,0 +1,4 @@
+*bleve
+bin/
+.netrc
+logs.txt

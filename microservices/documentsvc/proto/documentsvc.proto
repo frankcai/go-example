@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package documentsvc;
+
+option go_package = "github.com/frankcai/go-example/microservices/documentsvc;documentsvc";
+
+service DocumentSvc {
+	rpc Hello(HelloRequest) returns (HelloResponse) {}
+	rpc DeleteIndex(DeleteIndexRequest) returns (DeleteIndexResponse) {}
+	rpc Query(QueryRequest) returns (QueryResponse) {}
+}
+message HelloRequest {
+}
+
+message HelloResponse {
+	bool succeeded = 1;
+}
+
+message DeleteIndexRequest {
+	string indexPath = 1;
+}
+
+message DeleteIndexResponse {
+	bool succeeded = 1;
+}
+
+message QueryRequest {
+	string queryString = 1;
+}
+
+message QueryResponse {
+	bool succeeded = 1;
+	string queryResponse = 2;
+}

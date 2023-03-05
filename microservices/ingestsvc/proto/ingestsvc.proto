@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package ingestsvc;
+
+option go_package = "github.com/frankcai/go-example/microservices/ingestsvc;ingestsvc";
+
+service IngestSvc {
+	rpc Hello(HelloRequest) returns (HelloResponse) {}
+	rpc IngestFiles(IngestFilesRequest) returns (IngestFilesResponse) {}
+}
+message HelloRequest {
+}
+
+message HelloResponse {
+	bool succeeded = 1;
+}
+message IngestFilesRequest {
+	string dataPath = 1;
+}
+
+message IngestFilesResponse {
+	bool succeeded = 1;
+	string IngestResponse = 2;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+go 1.18
+
+use (
+	./client
+	./microservices/documentsvc
+	./microservices/ingestsvc
+	./microservices/proto
+	./monolith
+)

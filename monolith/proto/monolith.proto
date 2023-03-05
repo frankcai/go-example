@@ -1,0 +1,54 @@
+syntax = "proto3";
+
+package monolith;
+
+option go_package = "github.com/frankcai/go-example/monolith;monolith";
+
+service Monolith {
+	rpc Hello(HelloRequest) returns (HelloResponse) {}
+	rpc IngestFiles(IngestFilesRequest) returns (IngestFilesResponse) {}
+	rpc DeleteIndex(DeleteIndexRequest) returns (DeleteIndexResponse) {}
+	rpc Query(QueryRequest) returns (QueryResponse) {}
+}
+message HelloRequest {
+}
+
+message HelloResponse {
+	bool succeeded = 1;
+}
+
+message IngestFilesRequest {
+	string dataPath = 1;
+	string indexPath = 2;
+}
+
+message IngestFilesResponse {
+	bool succeeded = 1;
+	string CreateResponse = 2;
+}
+message DeleteIndexRequest {
+	string indexPath = 1;
+}
+
+message DeleteIndexResponse {
+	bool succeeded = 1;
+}
+message QueryRequest {
+	string indexPath = 1;
+	string queryString = 2;
+}
+
+message QueryResponse {
+	bool succeeded = 1;
+	string queryResponse = 2;
+}
+
+
+
+
+
+
+
+
+
+

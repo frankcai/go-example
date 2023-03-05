@@ -1,0 +1,26 @@
+services:
+  client:
+    build: ./client
+    image: client
+    depends_on:
+      - monolith
+      - documentsvc
+      - ingestsvc
+  monolith:
+    build: ./monolith
+    image: monolith
+    ports:
+      - "6777:6777"
+      - "33777:33777"
+  documentsvc:
+    build: ./microservices/documentsvc
+    image: documentsvc
+    ports:
+      - "6779:6779"
+      - "33779:33779"
+  ingestsvc:
+    build: ./microservices/ingestsvc
+    image: ingestsvc
+    ports:
+      - "6778:6778"
+      - "33778:33778"

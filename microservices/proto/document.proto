@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package document;
+
+option go_package = "github.com/frankcai/go-example/microservices/proto/document;document";
+
+// New Document has been indexed
+message NewDocument {
+	// unique id
+	string id = 1;
+	// unix timestamp
+	int64 timestamp = 2;
+	// filename
+	string filename = 3;
+	// extension of file
+	string ext = 4;
+	// message
+	string message = 5;
+}
+
+// Document has been saved
+message DocumentSaved {
+	// unique id
+	string id = 1;
+	// unix timestamp
+	int64 timestamp = 2;
+	// filename
+	string filename = 3;
+	// extension of file
+	string ext = 4;
+}
+
+
+
+
+
+
+
+
