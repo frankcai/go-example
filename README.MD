@@ -1,13 +1,13 @@
-# Performance Comparison of Monolith to Microservices using a prototype
+# Performance comparison between monolith and microservices architecture based on a prototype
 
 ## Table of Contents
 
-- [About The Project](#about-the-project)
+- [About the project](#about-the-project)
 - [Running on Ubuntu](#running-on-ubuntu)
 - [Running on Windows](#running-on-windows)
 - [Development](#development)
 
-## About The Project
+## About the project
 
 This project is a simple implementation of a document management system (DMS) in two software architecture styles, monolith and microservices. The goal is to compare the performance of each style. To achieve a fair comparison, only unique architectural code will be different, code that offers functionality will be kept identical. The program will implement the following use case: A User calls on the program to index and query a collection of his digital documents. 
 
